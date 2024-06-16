@@ -7,6 +7,10 @@
   background-color: #000;
 }
 
+body {
+  overflow-x: hidden;
+}
+
 .section_hero {
   background-image: url('../images/dumb_gif.gif');
   background-position: 50%;
@@ -17,6 +21,8 @@
   height: 100vh;
   display: flex;
   position: relative;
+  overflow: hidden;
+  overlay: hidden;
 }
 
 .hero_blue {
@@ -107,6 +113,10 @@
   width: 200vw;
   height: 80px;
   display: flex;
+  overflow: hidden;
+  overlay: hidden;
+  position: relative;
+  
 }
 
 .section_about {
@@ -155,7 +165,7 @@
 
 .block_para {
   text-align: center;
-  width: 650px;
+  /* width: 650px; */
   margin-top: 50px;
 }
 
@@ -188,7 +198,14 @@
   bottom: 0%;
   left: 0%;
   right: 0%;
+
 }
+
+  @media (max-width: 767px) {
+    .div-block {
+      overflow:auto
+    }
+  }
 
 .image-3 {
   z-index: 2;
@@ -201,7 +218,11 @@
   align-items: flex-start;
   margin-top: 50px;
   display: flex;
+  
 }
+
+
+
 
 .block_fk {
   flex-flow: column;
@@ -361,6 +382,8 @@
 .section_join__thumb{
   display: flex;
   flex-direction: column;
+  align-items: center;
+
 }
 
 .button_socials {
